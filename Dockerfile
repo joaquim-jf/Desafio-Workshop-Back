@@ -1,5 +1,5 @@
 # Estágio de Build
-FROM mcr.microsoft.com/dotnet/sdk:net10.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0
 WORKDIR /src
 
 # Copia o arquivo de projeto de dentro da pasta e restaura
