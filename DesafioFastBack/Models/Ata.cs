@@ -10,4 +10,11 @@ namespace DesafioFastBack.Models
         // Use o nome da propriedade exatamente como está na sua Controller (singular)
         public List<Colaborador> Colaborador { get; set; } = new List<Colaborador>(); 
     }
+        //DTO (Data Transfer Object) solicita apenas o id 
+    public class AtaCreateDto
+    {
+        public int WorkshopId { get; set; }
+        public List<int> ColaboradoresIds { get; set; } = new List<int>();
+    }
+    
 }
