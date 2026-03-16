@@ -1,0 +1,6 @@
+@DesafioFastBack_HostAddress = http://localhost:5261
+
+GET {{DesafioFastBack_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

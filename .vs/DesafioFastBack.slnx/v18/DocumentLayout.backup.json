@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ProjetoFastTellMe\\DesafioFastBack\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{628FF890-FE39-D2CC-6D51-305B0FC6EE00}|DesafioFastBack\\DesafioFastBack.csproj|d:\\projetofasttellme\\desafiofastback\\desafiofastback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{628FF890-FE39-D2CC-6D51-305B0FC6EE00}|DesafioFastBack\\DesafioFastBack.csproj|solutionrelative:desafiofastback\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\Program.cs",
+              "RelativeDocumentMoniker": "DesafioFastBack\\Program.cs",
+              "ToolTip": "D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\Program.cs*",
+              "RelativeToolTip": "DesafioFastBack\\Program.cs*",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABsAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-14T12:19:21.465Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20260316184202_InicialPostgres.cs",
+              "DocumentMoniker": "D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs",
+              "RelativeDocumentMoniker": "DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs",
+              "ToolTip": "D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs",
+              "RelativeToolTip": "DesafioFastBack\\Migrations\\20260316184202_InicialPostgres.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T18:42:02.276Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "gwwmxk54.sql ",
+              "DocumentMoniker": "D:\\ProjetoFastTellMe\\DesafioFastBack\\DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql",
+              "RelativeDocumentMoniker": "DesafioFastBack\\obj\\Debug\\net10.0\\gwwmxk54.sql",
+              "ToolTip": "gwwmxk54.sql ",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-03-16T18:33:24.221Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
