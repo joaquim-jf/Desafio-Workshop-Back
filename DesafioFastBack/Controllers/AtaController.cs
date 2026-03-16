@@ -18,25 +18,34 @@ namespace DesafioFastBack.Controllers
         }
         // Método para cadastrar uma nova Ata no banco
         [HttpPost]
-        public async Task<IActionResult> Criar([FromBody] Ata novaAta)
+        public async Task<IActionResult> Criar([FromBody] AtaCreateDto dto)
         {
-            //  Validar se o Workshop foi enviado no JSON
-            if (novaAta.workshop == null || novaAta.workshop.Id == 0)
-                return BadRequest("É necessário informar um Workshop válido.");
-
-            // 2. BUSCAR o workshop no banco
-            var workshopDoBanco = await _context.Workshops.FindAsync(novaAta.workshop.Id);
-
+            // 1. Validar Workshop
+            var workshopDoBanco = await _context.Workshops.FindAsync(dto.WorkshopId);
             if (workshopDoBanco == null)
-                return NotFound("Workshop não encontrado no banco de dados.");
-
-           
-            novaAta.workshop = workshopDoBanco;
-
-            //  Salvar a Ata
+                return NotFound("Workshop não encontrado.");
+        
+            // 2. Criar a instância da Model Ata (o ID será gerado pelo Banco)
+            var novaAta = new Ata
+            {
+                workshop = workshopDoBanco,
+                Colaborador = new List<Colaborador>()
+            };
+        
+            // 3. Associar os Colaboradores pelos IDs enviados
+            foreach (var id in dto.ColaboradoresIds)
+            {
+                var colab = await _context.Colaboradores.FindAsync(id);
+                if (colab != null)
+                {
+                    novaAta.Colaborador.Add(colab);
+                }
+            }
+        
+            // 4. Salvar no Banco
             _context.Atas.Add(novaAta);
             await _context.SaveChangesAsync();
-
+        
             return Created("", novaAta);
         }
         //Visualizar Workshop e Colaboradores juntos
