@@ -3,6 +3,7 @@
 Este projeto é uma API REST desenvolvida em **.NET 8** para gerenciar Atas de Workshops. A aplicação permite o cadastro de Workshops, Colaboradores e a geração de Atas vinculando esses elementos, utilizando **PostgreSQL** como banco de dados.
 
 ---
+URL da API: `https://desafio-workshop-back.onrender.com/swagger/index.html`
 
 ## 🛠️ Tecnologias Utilizadas
 
