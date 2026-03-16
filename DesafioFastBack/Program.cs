@@ -1,6 +1,5 @@
 using DesafioFastBack.Data;
 using Microsoft.EntityFrameworkCore;
-using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// 2. Configura o CORS (Fundamental para o Angular conseguir acessar a API)
+// 2. Configura o CORS
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowAll", policy => {
         policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
@@ -16,19 +15,21 @@ builder.Services.AddCors(options => {
 });
 
 builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+
+// TROCA: Em vez de AddOpenApi, usamos o Swagger para .NET 8
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// 3. Liberar Documentação em Produção 
-app.MapOpenApi();
-app.MapScalarApiReference();
+// 3. Liberar Documentação (Swagger disponível no Render)
+app.UseSwagger();
 app.UseSwaggerUI(options => {
-    options.SwaggerEndpoint("/openapi/v1.json", "Minha API v1");
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Minha API v1");
     options.RoutePrefix = "swagger"; // Acessível em: url-do-render/swagger
 });
 
-// 4. Rodar Migrations Automaticamente (Cria as tabelas no banco do Render ao subir)
+// 4. Rodar Migrations Automaticamente
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -38,7 +39,7 @@ using (var scope = app.Services.CreateScope())
     }
 }
 
-app.UseCors("AllowAll"); // Ativa a política de acesso
+app.UseCors("AllowAll");
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
